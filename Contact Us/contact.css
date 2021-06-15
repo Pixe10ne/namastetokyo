@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family : 'ヒラギノ角ゴ ProN' , 'Hiragino Kaku Gothic ProN' , '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic' , 'メイリオ' , Meiryo , 'ＭＳ ゴシック' , 'MS Gothic' , HiraKakuProN-W3 , 'TakaoExゴシック' , TakaoExGothic , 'MotoyaLCedar' , 'Droid Sans Japanese' , sans-serif;
+    word-wrap: break-word;
+}
+.title {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0%;
+}
+.subtitle {
+    text-align: center;
+}
+#img {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 15px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+ul {
+    background-color: grey;
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 100px;
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    display: inline-block;
+    padding: 10px 5px;
+    margin-left: 50px;
+}
+li a {
+    text-decoration: none;
+    padding: 11px;
+    color: white; 
+}
+li a:hover {
+    background: black;
+}
+.active {
+    background: black;
+}
+#delivery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em;/*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+    gap: 1em;
+    margin-bottom: 2em;
+    background: lightgray;
+}
+h2 {
+    text-align: center;
+}
+.container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container h3, i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: bold;
+}
+i {
+    padding-right: 10px;
+}
+.container div:nth-child(odd) {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    border-radius: 30% 30% 0% 0%;
+    transition: 3s ease-in 1s;
+}
+.container div:nth-child(even) {
+    background-color: lightgray;
+    color: white;
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    border-radius: 0% 0% 30% 30%;
+    padding: 17px;
+    margin-bottom: 25px;
+    transition: 3s ease-in 1s;
+}
+.container a {
+    text-decoration: none;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: bold;
+}
+address {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: bold;
+}
+
+#delivery div {
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px black;
+    width: 75%;
+    margin: auto;
+    background: white;
+}
+#delivery h3 {
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 1px 1px 3px gray;
+}
+#delivery a {
+    text-decoration: none;
+    color: black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: bold;
+}
+#partner {
+    margin: auto;
+    display: block;
+    padding-bottom: 10px;
+}
+.zoom-in {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+.zoom-in:hover {
+    transform: scale(1.1);
+}
+footer {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: black;
+    padding-top: 10px;
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+/*Responsive header for Smart Phone*/
+@media screen and (max-width: 540px) {
+    header {
+        text-align: center;
+    }
+    ul li {
+        height: auto;
+        width: 100%;
+        background-color: gray;
+        margin: auto;
+    }
+    li {
+        border-bottom: 1px solid black;
+    }
+    li a:active {
+        background-color: black;
+    }
+        
+    h2 {
+        text-align: center;
+        background: black;
+        color: white;
+        text-shadow: 1px 1px 2px lightgrey;
+    }
+    #delivery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .container div:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.699);
+        color: white;
+        border: 1px solid black;
+        width: 75%;
+        margin: auto;
+        border-radius: 30% 30% 0% 0%;
+    }
+    .container div:nth-child(even) {
+        background-color: lightgray;
+        color: white;
+        border: 1px solid black;
+        width: 75%;
+        margin: auto;
+        border-radius: 0% 0% 30% 30%;
+        padding: 17px;
+        margin-bottom: 25px;
+    }
+    .small {
+        font-size: 14px;
+    }
+    }
+
+@media screen and (max-width: 280px) {
+    #delivery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    #partner {
+        height: 150px;
+        width: 150px;
+    }
+}

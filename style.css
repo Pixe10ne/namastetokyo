@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family : 'ヒラギノ角ゴ ProN' , 'Hiragino Kaku Gothic ProN' , '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic' , 'メイリオ' , Meiryo , 'ＭＳ ゴシック' , 'MS Gothic' , HiraKakuProN-W3 , 'TakaoExゴシック' , TakaoExGothic , 'MotoyaLCedar' , 'Droid Sans Japanese' , sans-serif;
+}
+.title {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0%;
+}
+.subtitle {
+    text-align: center;
+}
+#img {
+display: flex;
+justify-content: space-around;
+position: relative;
+top: 15px;
+z-index: -1;
+opacity: 0.5;
+}
+
+ul {
+    background-color: grey;
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 100px;
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    display: inline-block;
+    padding: 10px 5px;
+    margin-left: 50px;
+}
+li a {
+    text-decoration: none;
+    padding: 11px;
+    color: white; 
+}
+li a:hover {
+    background: black;
+}
+.active {
+    background: black;
+}
+#logo {
+    display: block;
+    width: 80%;
+    position: fixed;
+    top: 100px;
+    left: -370px;
+    animation-name: rotation1;
+    animation-timing-function: linear;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    opacity: .05;
+}
+#logo1 {
+    display: block;
+    width: 80%;
+    position: fixed;
+    top: 100px;
+    left: -370px;
+    animation-name: rotation2;
+    animation-timing-function: linear;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    opacity: 0.1;
+}
+img {
+    border-style: none;
+}
+
+@keyframes rotation1 {
+from {transform: rotate(0deg);}
+to {transform: rotate(360deg);}
+}
+@keyframes rotation2 {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+.borderalign1 {
+    border: 3px solid black;
+    background: lightgray;
+    margin-top: 3%;
+    padding: 10px;
+}
+.image1 {
+    float: right;
+    padding: 10px 5px;
+}
+.border {
+    width: 75%;
+    margin: auto;
+}
+h2 {
+    text-align: center;
+}
+.borderalign0 {
+    border: 3px solid black;
+    background: rgba(211, 211, 211, 0.384);
+    padding: 10px;
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.image2 {
+    float: left;
+    padding: 10px 5px;
+  }
+.container {
+    margin-top: 36px;
+    text-align: center;
+    font-family: monospace;
+}
+  
+.btn {
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+  }
+.btn1 a {
+    color: #3498db;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.btn1 a:hover {
+    color: #fff;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+}
+.btn1::before {
+    top: 0%;
+    border-radius: 0 0 50% 50%;
+}
+.btn1:hover::before {
+    height: 180%;
+}
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    background: rgb(78, 75, 75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+.intro-text {
+    color: rgb(233, 232, 235);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5rem;
+}
+.hide {
+    background: black;
+    overflow: hidden;
+}
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}
+.latestinfo {
+    width: 55%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px lightgray;
+    margin: auto;
+    text-align: center;
+}
+/* Responsive Header */
+@media screen and (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    ul li {
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-color: gray;
+        margin-left: 0px;
+    }
+    li {
+        border-bottom: 1px solid black;
+    }
+    li a:active {
+        background-color: black;
+    }
+    .image1 {
+        display: flex;
+        margin: auto;
+    }
+    .text {
+        font-size: 72px;
+    } 
+    .border {
+        width: 99%;
+    }
+    h2 {
+        text-align: center;
+        background: black;
+        color: white;
+        text-shadow: 1px 1px 2px lightgrey;
+    }
+    h3 {
+        text-align: center;
+    }
+    .image1 {
+        display: flex;
+        margin-left: 10%;
+        margin-right: 16%;
+        width: 250px;
+        height: 250px;
+        
+    }
+    .image2 {
+        display: inline-block;
+        margin-left: 14%;
+        margin-right: 10%;
+        width: 250px;
+        height: 250px;
+    }
+
+    }
+    /*Responsive header for Smart Phone*/
+    @media screen and (max-width: 375px) {
+    header {
+        text-align: center;
+    }
+    ul li {
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-color: gray;
+    }
+    li a:active {
+        background-color: black;
+    }
+    .image1 {
+        border: 1px solid black;
+        padding: 2px;
+        display: block;
+        margin-bottom: 15px;
+        margin-right: 45px;
+    }
+    .try {
+        display: block;
+        padding: 15px;
+    }
+    .image2 {
+        border: 1px solid black;
+        width: 270px;
+        height: 270px;
+        margin-left: 9%;
+        margin-bottom: 15px;
+        }
+    }
+    
+    @media screen and (max-width: 445px) {
+    .borderalign0 {
+        width: 98%;
+        margin:auto;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    .borderalign1 {
+        width: 98%;
+        margin:auto;
+    }
+    .free {
+        margin-top: 5%;
+    }
+    .image1 {
+        border: 1px solid black;
+        padding: 2px;
+        display: block;
+        margin-bottom: 15px;
+        margin-right: 65px;
+    }
+    .try {
+        display: block;
+        padding: 15px;
+    }
+    .image2 {
+        border: 1px solid black;
+        width: 270px;
+        height: 270px;
+        margin-left: 13%;
+        margin-bottom: 15px;
+        }
+    }

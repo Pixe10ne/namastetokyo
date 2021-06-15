@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family : 'ヒラギノ角ゴ ProN' , 'Hiragino Kaku Gothic ProN' , '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic' , 'メイリオ' , Meiryo , 'ＭＳ ゴシック' , 'MS Gothic' , HiraKakuProN-W3 , 'TakaoExゴシック' , TakaoExGothic , 'MotoyaLCedar' , 'Droid Sans Japanese' , sans-serif;
+}
+.title {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0%;
+}
+.subtitle {
+    text-align: center;
+}
+#img {
+display: flex;
+justify-content: space-around;
+position: relative;
+top: 15px;
+z-index: -1;
+opacity: 0.5;
+}
+#image {
+    margin: auto;
+    margin-left: 40%;
+    padding: 2px;
+    margin-bottom: 2%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px black;
+}
+#image {
+    transform: scale(1);
+    transition: 1s ease-in;
+}
+#image:hover {
+    transform: scale(1.1);
+}
+ul {
+    background-color: grey;
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 100px;
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    display: inline-block;
+    padding: 10px 5px;
+    margin-left: 50px;
+}
+li a {
+    text-decoration: none;
+    padding: 11px;
+    color: white; 
+}
+li a:hover {
+    background: black;
+}
+.active {
+    background: black;
+}
+table, th, tr {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+th {
+    width: 30%;
+}
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+tr:nth-child(even):hover {
+    background-color: rgba(184, 182, 182, 0.459);
+}
+tr:nth-child(odd):hover {
+    background-color: rgba(173, 210, 223, 0.486);
+}
+footer {
+    text-align: center;
+    background: linear-gradient(79deg, rgba(0, 0 , 0, 0.7), rgba(50, 50 , 50, 0.7));
+    color: white;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+#text {
+    font-size: 12px;
+    text-align: right;
+}
+/* Responsive Header */
+@media screen and (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    ul li {
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-color: gray;
+        margin-left: 0px;
+    }
+    li {
+        border-bottom: 1px solid black;
+    }
+    }
+    li a:active {
+        background-color: black;
+    }
+/* Responsive Table*/
+@media screen and (max-width: 768px) {
+h1 {
+    margin-top: 2px;
+    padding-top: 5px;
+}
+h1 img {
+    z-index: -1;
+    opacity: 0.5;
+    border-style: none;
+    display: block;
+    margin: auto;
+}
+h2 {
+    text-align: center;
+    background: black;
+    color: white;
+    text-shadow: 1px 1px 2px lightgrey;
+}
+table, tbody {
+    display: none;
+    margin-left: 0px;
+    background: lightgrey;
+}
+table, tbody, tr, th, td {
+    text-align: center;
+    display: block;
+    width: auto;
+    margin: auto;
+}
+th, td {
+    padding: 5px;
+}
+tr {
+    margin-bottom: 5px;
+}
+tbody:nth-child(even) {
+    background-color: lightblue;
+}
+h3 {
+    text-align: center;
+    text-decoration: dashed;
+}
+      
+footer {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: black;
+    padding-top: 10px;
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+#image {
+    margin: auto;
+    display: flex;
+    margin-bottom: 5%;
+    background: lightgray;
+}
+
+}
+@media screen and (max-width: 375px) {
+    header {
+        text-align: center;
+        }
+    ul li {
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-color: gray;
+        }
+    li a:active {
+        background-color: black;
+    }
+    
+    h2 {
+        text-align: center;
+        background: black;
+        color: white;
+        text-shadow: 1px 1px 2px lightgrey;
+    }
+    table, tbody {
+        display: none;
+    }
+    table, tbody, tr, th, td {
+        display: block;
+        table-layout: auto;
+        background: lightgrey;
+        margin: auto;
+    }
+    tbody:nth-child(even) {
+        background:lightblue;
+    }
+    table,tr {
+        margin-bottom: 15px;
+    }
+    
+    footer {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background: black;
+        padding-top: 10px;
+        color: white;
+    }
+    footer a{
+        text-decoration: none;
+        color: white;
+    }
+} 
